@@ -1,0 +1,39 @@
+@import "../../../../scss/_variable";
+
+$img-username: "../../../base/Img/features/username.png";
+$img-phone: "../../../base/Img/features/phone.png";
+$img-email: "../../../base/Img/features/email.png";
+$img-password: "../../../base/Img/features/lock.png";
+
+.arrow-prev
+{
+    position: absolute;
+    top: 28px;
+    left: 35px;
+    width: 40px;
+    height: 40px;
+    i
+    {
+        color: $text-color;
+        font-size: 28px;
+    }
+}
+
+.input{
+    &.username::after
+    {
+        background-image: url($img-username);
+    }
+    &.phone::after
+    {
+        background-image: url($img-phone);
+    }
+    &.email::after
+    {
+        background-image: url($img-email);
+    }
+    &.password::after, &.confirm::after
+    {
+        background-image: url($img-password);
+    }
+}

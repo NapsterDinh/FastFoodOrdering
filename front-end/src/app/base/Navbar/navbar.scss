@@ -1,0 +1,104 @@
+@import "../../../scss/setting";
+.module.module-navigation.left.mr-4
+{
+    width: 75%;
+    padding: 0!important;
+    margin-left: 6px;
+    margin-right: 0!important;
+    .navbar{
+        padding: 0;
+        .container
+        {
+            padding: 0;
+            .navbar-nav{
+                width: 100%;
+                justify-content: space-between;
+                a{
+                    padding: 0.5rem 0;
+                    &:hover{
+                        color: inherit;
+                    }
+                }
+                .nav-item.dropdown{
+                    a{
+                        &::after{
+                            transition-property: all;
+                            transition-duration: .25s;
+                            transition-timing-function: ease-out;
+                            opacity: .5;
+                            font-family: themify-icons;
+                            content: "\e62a";
+                            margin-left: .5rem;
+                            font-size: .75em;
+                            display: inline-block;
+                            vertical-align: middle;
+                            border: none;
+                        }
+                        &:hover::after
+                        {
+                            transition-property: all;
+                            transition-duration: .25s;
+                            transition-timing-function: ease-out;
+                            opacity: .5;
+                            font-family: themify-icons;
+                            content: "\e62a";
+                            margin-left: .5rem;
+                            font-size: .75em;
+                            display: inline-block;
+                            vertical-align: middle;
+                            opacity: 1;
+                        }
+                    }
+                    .dropdown-menu{
+                        padding: 0;
+                        transition: all .25s ease-out;
+                        display: flex;
+                        transform: translateY(10px);
+                        top: calc(100% + 45px);
+                        left: 0;
+                        position: absolute;
+                        background-color: #fff;
+                        opacity: 0;
+                        visibility: hidden;
+                        color: #383c40;
+                        text-align: left;
+                        &.show{
+                            transform: translateY(0);
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                        .dropdown-mega{
+                            width: 200px;
+                            .nav-dropdown-item{
+                                margin-left: 20px;
+                                margin-right: 20px;
+                                a{
+                                    padding: 10px 0px 0px 0px;
+                                    line-height: 35px;
+                                    font-size: .9rem;
+                                    &:hover
+                                    {
+                                        background-color: white;
+                                        color: $link-hover;
+                                    }
+                                    &::after{
+                                        display: none;
+                                    }
+                                }
+                                .dropdown-divider
+                                {
+                                    margin: 0;
+                                }
+                            }
+                        }
+                        .dropdown-image{
+                            width: 250px;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+

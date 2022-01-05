@@ -1,0 +1,19 @@
+
+.nav
+{
+  &.nav-tabs
+  {
+    padding: 15px 0px;
+    background-color: white;
+    .nav-item
+    {
+      .tabbed-pane-nav-item-button
+      {
+        &.active
+        {
+          color: #ddae71;
+        }
+      }
+    }
+  }
+}

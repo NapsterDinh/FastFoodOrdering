@@ -1,0 +1,18 @@
+@import "~bootstrap/scss/bootstrap";
+@import '../scss/core.scss';
+@import '../scss/theme_beige.scss';
+@import "../scss/setting";
+
+.css-79elbk
+{
+    position: static!important;
+}
+.btn-primary:disabled
+{
+    opacity: 0.65;
+    pointer-events: none;
+    border-color: #ddae71;
+    background-color: #ddae71;
+    color: #fff;
+}
+

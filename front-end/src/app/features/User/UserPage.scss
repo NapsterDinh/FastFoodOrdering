@@ -1,0 +1,41 @@
+@import '../../../scss/_variable';
+
+.animsition
+{
+    .middle-content
+    {
+        .middle-user-page
+        {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            .accordion-collapse
+            {
+                display: block;
+                transition: height 0.3s ease;
+                height: 0px;
+                overflow: hidden;
+                &.show
+                {
+                    height: fit-content;
+                }
+                .accordion-body
+                {
+                    flex-direction: column;
+                    display: flex;
+                    .link-container
+                    {
+                        padding-left: 20px;
+                        padding-bottom: 10px;
+                        &.selected
+                        {
+                            span
+                            {
+                                color: #ddae71;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

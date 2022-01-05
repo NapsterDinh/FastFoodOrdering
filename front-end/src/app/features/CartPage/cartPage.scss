@@ -1,0 +1,48 @@
+
+.page-content
+{
+    .container
+    {
+        .order-method-cart
+        {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            background-color: white;
+            margin-bottom: 20px;
+            span
+            {
+                margin-left: 20px;
+                font-size: 20px;
+            }
+            .order-method-cart-right{
+                form
+                {
+                    margin-top: 5px;
+                    label
+                    {
+                        cursor: pointer;
+                    }
+                }
+                span
+                {
+                    line-height: 32px;
+                    font-size: 16px;
+                    &:last-child
+                    {
+                        color: #05a;
+                        cursor: pointer;
+                        margin-right: 15px;
+                        font-size: 14px;
+                        padding-left: 40px;
+                    }
+                }
+            }
+            &:not(:first-child)
+            {
+                padding-bottom: 20px;
+            }
+        }
+    }
+}

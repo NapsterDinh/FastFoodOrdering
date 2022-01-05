@@ -1,0 +1,20 @@
+.content-slider{
+    height: 100%;
+    position: relative;
+    .bg-image
+    {
+        background-image: url('slider-burger_dark.jpg');
+        position: relative!important;
+        &:nth-child(2)
+        {
+            background-image: url('slider-burger_dark.jpg');
+        }
+    }
+    .container
+    {
+        position: absolute;
+        top: 32%;
+        left: 17%;
+        color: white;
+    }
+}

@@ -1,0 +1,114 @@
+@import "../../../../scss/_variable";
+
+.profile-container
+{
+    .profile{
+        padding-top: 0px!important;
+        padding-bottom: 0!important;
+    }
+    text-align: right;
+    .profile.module.show.dropdown
+    {
+        button
+        {
+            background-color: white;
+        }
+    }
+    button
+    {
+        user-select: none;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        transition: none;
+        &:hover, &:focus, &:active
+        {
+            background-color: transparent!important;
+            box-shadow: none!important;
+        }
+        &:hover::before
+        {
+            background-color: transparent;
+        }
+        &:before
+        {
+            background-color: transparent;
+            transition: none;
+        }
+        &:hover, &:focus
+        {
+            transform: none;
+            box-shadow: none;
+        }
+        img
+        {
+            height: 30px;
+            width: 30px;
+            border: 2px solid $border-color-avatar;
+        }
+        &::after
+        {
+            color: $border-color-avatar;
+            display: none;
+        }
+    }
+    .dropdown-menu
+    {
+        user-select: none;
+        transition: all .25s ease-out!important;
+        inset: 80px auto auto 0px!important;
+        opacity: 0;
+        visibility: hidden;
+        display: block;
+        transform: translateY(10px)!important;
+        border-radius: 10px;
+        box-shadow: -1px 3px 7px -1px rgba(0,0,0,0.44);
+        border-color: $border-color-box;
+        transform: translate(-137px, 10px)!important;
+        &.show
+        {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-137px, -30px)!important;
+        }
+        a{
+            font-size: 13px;
+            line-height: 30px;
+            &:active
+            {
+                background-color: $button-hover;
+                color: #212529;
+            }
+            &:last-child
+            {
+                border-top: 1px solid $border-color-avatar;
+            }
+        }
+        .name-user
+        {
+            border-bottom: 1px solid $border-color-avatar;
+            user-select: none;
+            span
+            {
+                display: block;
+                font-size: 14px;
+                padding: 0;
+                margin: 0;
+                padding-left: 15px;
+                margin-right: 15px;
+                line-height: 20px;
+                &:last-child
+                {
+                    font-size: 12px;
+                    margin-right: 40px;
+                    padding-bottom: 10px;
+                    color: $text-email-color;
+                }
+                &:first-child
+                {
+                    padding-top: 5px;
+                }
+            }
+        }
+    }
+}

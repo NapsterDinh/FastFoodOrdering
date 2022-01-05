@@ -1,0 +1,379 @@
+@import '../../../../scss/_variable';
+
+#modal-detail-food
+{
+    .modal-content
+    {
+        overflow-y: auto;
+    }
+    @media (min-width: 992px) {
+        max-height: calc(100% - 30px);   
+        max-width: 1000px;
+    }
+    label
+    {
+        user-select: none;
+    }
+    margin-top: 10px;
+    height: fit-content;
+    .modal-header
+    {
+        border: none;
+        padding: 0;
+    }
+    .modal-body
+    {
+        h6{
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        .row
+        {
+            padding-top: 20px;
+            .picture-price-product
+            {
+                margin-top: 150px;
+                .picture-price-product-container{
+                    .product
+                    {
+                        display: flex;
+                        justify-content: center;
+                        img
+                        {
+                            width: 100%;
+                            height: auto;
+                            object-fit: cover;
+                        }
+                    }
+                    .price-total
+                    {
+                        text-align: center;
+                        padding-top: 10px;
+                        h3{
+                            font-weight: 500;
+                            color: red;
+                        }
+                    }
+                }
+                
+            }
+            .detail-info
+            {
+                background-color: #FAFAFA;
+                border-radius: 10px;
+                padding: 20px;
+                .detail-info-container
+                {
+                    .title{
+                        display: flex;
+                        justify-content: space-between;
+                        position: relative;
+                        padding-top: 10px;
+                        h5{
+                            display: block;
+                            font-weight: 600;
+                            margin-bottom: 20px;
+                        }
+                        .info-product-container
+                        {
+                            border: 1px solid $border-color-avatar;
+                            border-radius: 50%;
+                            background-color: white;
+                            width: 25px;
+                            height: 25px;
+                            position: relative;
+                            cursor: pointer;
+                            &:hover
+                            {
+                                background-color: $background-switch;
+                            }
+                            i{
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%,-50%);
+                            }
+                            &:hover
+                            {
+                                .content-description
+                                {
+                                    display: block;
+                                }
+                                
+                            }
+                            .content-description
+                            {
+                                position: absolute;
+                                top: 45px;
+                                right: -10px;
+                                z-index: 20;
+                                border-radius: 10px;
+                                background: #000;
+                                padding: 15px;
+                                width: 330px;
+                                text-align: left;
+                                display: none;
+                                color: white;
+                                font-weight: 500;
+                                &::before
+                                {
+                                    position: absolute;
+                                    top: -10px;
+                                    right: 1px;
+                                    background-color: #000;
+                                    content: "";
+                                    clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+                                    width: 40px;
+                                    height: 40px;
+                                }
+                            }
+                        }
+                    }
+                    .dough-size-preview
+                    {
+                        h6{
+                            color: $link-hover;
+                            font-weight: 400;
+                            margin-bottom: 10px;
+                        }
+                    }
+                    .toping-overview-container
+                    {
+                        margin-bottom: 20px;
+                        .toping-overview
+                        {
+                            padding: 20px;
+                            border: 1px solid $border-color-avatar;
+                            background-color: white;
+                            border-radius: 10px;
+                        }
+                        
+                    }
+                    .attribute
+                    {
+                        .border-bottom
+                        {
+                            margin-bottom: 10px;
+                            border-bottom: 1px solid $border-color-avatar;
+                        }
+                        .radio
+                        {
+                            visibility: hidden;
+                            position: absolute;
+                        }
+                        .size
+                        {
+                            ul{
+                                list-style-type: none;
+                                padding-left: 0;
+                                display: flex;
+                                justify-content: start;
+                                flex-flow: wrap;
+                                li{
+                                    display: block;
+                                    border-radius: 5px;
+                                    padding: 0;
+                                    margin-top: 10px;
+                                    margin-right: 30px;
+                                    input
+                                    {
+                                        &[type="radio"]:checked+label
+                                        { 
+                                            border: 1px solid $link-hover;
+                                            background-color: $background-focus-radio;
+                                        } 
+                                    }
+                                    label
+                                    {
+                                        height: 100%;
+                                        width: 100%;
+                                        text-align: center;
+                                        cursor: pointer;
+                                        border-radius: 5px;
+                                        padding: 10px;
+                                        background-color: white;
+                                        h6{
+                                            margin-bottom: 5px;
+                                            font-weight: 500;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .ough
+                        {
+                            ul{
+                                list-style-type: none;
+                                padding-left: 0;
+                                li{
+                                    display: block;
+                                    border-radius: 5px;
+                                    padding: 0;
+                                    input
+                                    {
+                                        
+                                    }
+                                    label
+                                    {
+                                        margin-left: 10px;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                        .toping
+                        {
+                            margin-bottom: 20px;
+                            ul{
+                                list-style-type: none;
+                                padding-left: 0;
+                                display: flex;
+                                justify-content: space-between;
+                                flex-flow: wrap;
+                                margin-left: 20px;
+                                .slick-slider
+                                {
+                                    width: 100%;
+                                    .slick-arrow
+                                    {
+                                        &.slick-next{
+                                            margin-right: 14px;
+                                        }
+                                    }
+                                }
+                                
+                                li{
+                                    display: block;
+                                    width: 85%!important;
+                                    flex: 0 0 30%;
+                                    
+                                    padding: 0;
+                                    position: relative;
+                                    margin-top: 10px;
+                                    i
+                                    {
+                                        font-size: 14px;
+                                        position: absolute;
+                                        bottom: 5%;
+                                        left: 43%;
+                                        font-size: 20px;
+                                        cursor: pointer;
+                                    }
+                                    input{
+                                        visibility: hidden;
+                                        position: absolute;
+                                        &[type="checkbox"]:checked+label
+                                        { 
+                                            background-color: $background-item-checked;
+                                        } 
+                                    }
+                                    .image-container
+                                    {
+                                        width: 100%;
+                                        text-align: center;
+                                        margin-top: 10px;
+                                        margin-bottom: 10px;
+                                        justify-content: center;
+                                        display: flex;
+                                        img{
+                                            width: 60px;
+                                            height: 60px;
+                                            object-fit: cover;
+                                        }
+
+                                    }
+                                    label
+                                    {
+                                        height: 100%;
+                                        width: 100%;
+                                        text-align: center;
+                                        cursor: pointer;
+                                        border-radius: 5px;
+                                        background-color: white;
+                                        padding: 10px;
+                                        padding-bottom: 30px;
+                                        border-radius: 15px;
+                                        font-weight: 500;
+                                        h6{
+                                            margin-bottom: 5px;
+                                            font-weight: 500;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .amount
+                    {
+                        .toogle-amount-container
+                        {
+                            display: flex;
+                            justify-content: center;
+                            margin-bottom: 20px;
+                            span
+                            {
+                                width: 40px;
+                                height: 40px;
+                                background-color: $text-color;
+                                color: white;
+                                position: relative;
+                                cursor: pointer;
+                                &:nth-child(1)
+                                {
+                                    border-top-left-radius: 10px;
+                                    border-bottom-left-radius: 10px;
+                                }
+                                &:nth-child(2)
+                                {
+                                    width: 100px;
+                                    background-color: white;
+                                    color: $text-color;
+                                    cursor: text;
+                                }
+                                &:nth-child(3)
+                                {
+                                    border-top-right-radius: 10px;
+                                    border-bottom-right-radius: 10px;
+                                }
+                                i
+                                {
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%,-50%);
+                                    cursor: pointer;
+                                }
+                                h4
+                                {
+                                    text-align: center;
+                                    padding-top: 5px;
+                                }
+                            }
+                        }
+                    }
+                    .note{
+                        textarea{
+                            width: 100%;
+                            min-height: 80px;
+                            height: fit-content;
+                            max-height: 130px;
+                            padding: 15px 20px;
+                            border-color: $border-color-avatar;
+                        }
+                    }
+                    .add-to-cart
+                    {
+                        display: flex;
+                        justify-content: end;
+                        margin-top: 10px;
+                        button{
+                            color: white;
+                            background-color: $text-color;
+                        } 
+                    }
+                }
+            }
+        }
+        
+    }
+}

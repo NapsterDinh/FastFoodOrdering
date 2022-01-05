@@ -1,0 +1,66 @@
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+
+.section.protrude{
+    height: 100%;
+    .slick-slider
+    {
+        height: 100%;
+        .slick-arrow
+        {
+            display: none!important;
+            opacity: 1;
+            visibility: visible;
+            
+            &.slick-prev
+            {
+                left: 3%;
+            }
+            &.slick-next
+            {
+                right: 3%;
+            }
+            &::before{
+                color: white;
+            }
+        }
+        .slick-list{
+            .slick-track{
+                .slick-slide{
+                    &>div{
+                        height: 100%;
+                    }
+                    .slide{
+                        position: relative;
+                        overflow: hidden;
+                        height: 100%;
+                    }
+                }
+                @media (max-width: 991px)
+                {
+                    height: 40vh;
+                }
+            }  
+        }
+        .slick-dots{
+            display: none!important;
+            bottom: 3%;
+            li{
+                button{
+                    &::before{
+                        background-color: white;
+                        width: 10px;
+                        height: 10px;
+                    }
+                }
+            }
+        }
+        &:hover
+        {
+            .slick-dots,.slick-arrow
+            {
+                display: block!important;
+            }
+        }
+    }
+}

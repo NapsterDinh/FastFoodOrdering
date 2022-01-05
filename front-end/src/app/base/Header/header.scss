@@ -1,0 +1,109 @@
+@import "../../../scss/_variable";
+
+#header {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    z-index: 900;
+    height: 120px!important;
+    .header-container-inner{
+        .row{
+            justify-content: space-between;
+            &.row-nav
+            {
+                justify-content: left;
+                transform: translateY(-3%);
+                .col-md-7{
+                    background-color: white;
+                    nav{
+                        padding: 0;
+                    }
+                }
+            }
+            .col-md-9
+            {
+                padding: 0;
+                .top-header
+                {
+                    .middle-header-container
+                    {
+                        margin-top: 10px;
+                        display: flex;
+                        justify-content: space-between;
+                        .module-login-profile
+                        {
+                            display: flex;
+                            justify-content: flex-end;
+                            .login-container
+                            {
+                                padding-top: 2px;
+                                padding-bottom: 0px;
+                                .login-container-inner
+                                {
+                                    padding-top: 10px;
+                                    i
+                                    {
+                                        font-size: 18px;
+                                        margin-right: 5px;
+                                    }
+                                }
+                                
+                            }
+                        }
+                        .module-lang
+                        {
+                            display: flex;
+                            width: 75%;
+                            justify-content: space-between;
+                        }
+                    }
+                }
+                .bottom-header
+                {
+                    @media (min-width: 768px)
+                    {
+                        flex: 0 0 28.33333%;
+                    }
+                    display: flex;
+                    justify-content: space-between;
+                    .cart-container
+                    {
+                        display: flex;
+                        justify-content: flex-end;
+                        margin-top: 10px;
+                        a
+                        {
+                            .cart-icon
+                            {
+                                position: relative;
+                                span
+                                {
+                                    &.cart-count
+                                    {
+                                        position: absolute;
+                                        width: 20px;
+                                        height: 20px;
+                                        background-color: $link-hover;
+                                        color: white;
+                                        border-radius: 50%;
+                                        top: -30px;
+                                        font-size: 12px;
+                                        right: -5px;
+                                        padding: 1px 2px 2px 1px;
+                                        text-align: center;
+                                        font-family: Oswald, sans-serif;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } 
+            }
+            
+        }
+    }
+    
+}
+#body-overlay{
+    display: block;
+}

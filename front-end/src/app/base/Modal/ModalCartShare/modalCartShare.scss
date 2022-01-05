@@ -1,0 +1,23 @@
+.fade.modal{
+    overflow-y: hidden!important;
+    #modal-covid
+    {
+        transform: translateY(10%)!important;
+        .modal-content
+        {
+            height: fit-content;
+            .modal-header
+            {
+                .bg-image
+                {
+                    background-image: url('modal-covid.jpg');
+                }
+            }
+        }
+    }
+}
+
+.modal-container {
+    display: flex;
+    justify-content: space-around;
+}

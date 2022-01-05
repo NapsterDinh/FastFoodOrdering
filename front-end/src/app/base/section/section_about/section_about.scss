@@ -1,0 +1,17 @@
+section.section-bg-edge
+{
+    .image.right
+    {
+        .bg-image
+        {
+            img{
+                @media (max-width: 991px)
+                {
+                    object-fit: unset;
+                }
+                display: block;
+                height: 100%;
+            }
+        }
+    }
+}

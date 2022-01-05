@@ -1,0 +1,153 @@
+
+.card
+{
+    background-color: white!important;
+    .card-header
+    {
+        margin-top: 20px;
+        background-color: white!important;
+        margin-left: 20px;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 20px;
+        h4
+        {
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        .btn
+        {
+            &:hover, &:focus
+            {
+                &::before
+                {
+                    display: none;
+                }
+            }
+        }
+    }
+    .card-body
+    {
+        margin-left: 20px;
+        margin-right: 20px;
+        min-height: 210px;
+        height: 100%;
+        .empty-address-list
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .row
+        {
+            &:not(:last-child)
+            {
+                border-bottom: 1px solid rgba(0,0,0,.3);
+            }
+            &:not(:first-child)
+            {
+                margin-top: 20px;
+            }
+            .col-sm-9
+            {
+                .label
+                {
+                    display: flex;
+                    margin-bottom: 10px;
+                    .type-address
+                    {
+                        border-radius: 10px;
+                        padding: 5px 10px;
+                        background-color: #ddae71;
+                        color: white;
+                        margin-left: 20px;
+                        user-select: none;
+                        cursor: default;
+                        &.default
+                        {
+                            background-color: #00bfa5;
+                        }
+                    }
+                }
+            }
+            .col-sm-3
+            {
+                text-align: right;
+                .address-action
+                {
+                    display: flex;
+                    justify-content: end;
+                    .edit-address
+                    {
+                        margin-right: 20px;
+                    }
+                    a
+                    {
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
+                button
+                {
+                    &.btn
+                    {
+                        margin-top: 20px;
+                        background-color: transparent;
+                        border: 1px solid rgba(0,0,0,.09);
+                        color: #383c40;
+                        transition: none;
+                        font-weight: 500;
+                        padding: 5px 10px;
+                        transform: none;
+                        box-shadow: 0 1px 1px 0 rgb(0 0 0 / 3%);
+                        text-transform: none;
+                        font-family: inherit;
+                        &:hover, &:focus
+                        {
+                            background-color: rgba(0,0,0,.02);
+                            &::before
+                            {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            &.default
+            {
+                .col-sm-9
+                {
+                    .label
+                    {
+                        .type-address
+                        {
+                            background-color: #00bfa5;
+                        }
+                    }
+                }
+                .col-sm-3
+                {
+                    .address-action
+                    {
+                        a
+                        {
+                            &.delete-address
+                            {
+                                display: none;
+                            }
+                        }
+                    }
+                    button
+                    {
+                        &.btn
+                        {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,41 @@
+
+#modal-confirm
+{
+    display: flex;
+    align-items: center;
+    .modal-content
+    {
+        height: fit-content;
+        .modal-header
+        {
+            .h4
+            {
+                margin-bottom: 0px;
+            }
+        }
+        .modal-body
+        {
+            padding-bottom: 1rem;
+            p
+            {
+                
+            }
+        }
+        .modal-footer
+        {
+            padding: 1rem 2rem;
+            .btn
+            {
+                &.save
+                {
+                    background-color: #ddae71;
+                    color: white;
+                    &:disabled
+                    {
+                        
+                    }
+                }
+            }
+        }
+    }
+}

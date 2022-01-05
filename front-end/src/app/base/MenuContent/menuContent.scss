@@ -1,0 +1,41 @@
+@import "../../../scss/_variable";
+
+.page-content {
+  .container {
+    .row.no-gutters {
+      .col-md-3 {
+      }
+      .col-md-9 {
+        min-height: fit-content;
+      }
+    }
+
+    .invite {
+      display: flex;
+      justify-content: flex-end;
+
+      .invite-box {
+        display: inline-flex;
+        justify-content: flex-end;
+        border: 1px solid black;
+        padding: 5px;
+      }
+
+      .invite-input {
+        margin-right: 10px;
+        width: 400px;
+      }
+
+      cursor: pointer;
+      margin-bottom: 10px;
+
+      &:hover {
+        color: gray;
+
+        .invite-box {
+          border: 1px solid gray;
+        }
+      }
+    }
+  }
+}

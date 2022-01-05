@@ -1,0 +1,90 @@
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+
+body:not(.no-margins) .section-main 
+{
+    @media (max-width: 1199px)
+    {
+        height: fit-content!important;
+    }
+}
+
+.section-main-2{
+    .slick-slider
+    {
+        height: 100%;
+        @media (max-width: 1199px)
+        {
+            height: fit-content!important;
+        }
+        .slick-arrow
+        {
+            display: none!important;
+            opacity: 1;
+            visibility: visible;
+            
+            &.slick-prev
+            {
+                left: 3%;
+            }
+            &.slick-next
+            {
+                right: 3%;
+            }
+            &::before{
+                color: white;
+            }
+        }
+        .slick-list{
+            height: 100%;
+            @media (max-width: 1199px)
+            {
+                height: fit-content!important;
+            }
+            .slick-track{
+                .slick-slide{
+                    &>div{
+                        height: 100%;
+                    }
+                    .slide{
+                        position: relative;
+                        overflow: hidden;
+                        height: 100%;
+                    }
+                }
+                @media (max-width: 991px)
+                {
+                    height: 40vh;
+                }
+                @media (min-width: 992px)
+                {
+                    height: calc(100vh - 130px);
+                }
+                @media (max-width: 1199px)
+                {
+                    height: 60vh;
+                }
+            }  
+        }
+        .slick-dots{
+            display: none!important;
+            bottom: 3%;
+            li{
+                button{
+                    &::before{
+                        background-color: white;
+                        width: 10px;
+                        height: 10px;
+                    }
+                }
+            }
+        }
+        &:hover
+        {
+            .slick-dots,.slick-arrow
+            {
+                display: block!important;
+            }
+        }
+    }
+}

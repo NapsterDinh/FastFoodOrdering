@@ -1,0 +1,183 @@
+@import "../../../../scss/_variable";
+
+.notification-container
+{
+    margin-right: 60px;
+    .notification{
+        padding-top: 0px!important;
+        padding-bottom: 0!important;
+        button{
+            position: relative;
+            span{
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background-color: $link-hover;
+                color: white;
+                border-radius: 50%;
+                top: -3px;
+                font-size: 12px;
+                right: -12px;
+                padding: 2px;
+            }
+            &:hover
+            {
+                i{
+                    transform: translateY(-2px);
+                    transition: transform 0.3s ease;
+                }
+            }
+        }
+    }
+    text-align: right;
+    .notification.module.show.dropdown
+    {
+        button
+        {
+            background-color: white; 
+        }
+    }
+    button
+    {
+        user-select: none;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        transition: none;
+        &:hover, &:focus, &:active
+        {
+            background-color: transparent!important;
+            box-shadow: none!important;
+        }
+        &:hover::before
+        {
+            background-color: transparent;
+        }
+        &:before
+        {
+            background-color: transparent;
+            transition: none;
+        }
+        &:hover, &:focus
+        {
+            transform: none;
+            box-shadow: none;
+        }
+        img
+        {
+            height: 30px;
+            width: 30px;
+            border: 2px solid $border-color-avatar;
+        }
+        &::after
+        {
+            color: $border-color-avatar;
+            display: none;
+        }
+        i{
+            color: $text-email-color;
+            font-size: 20px;
+            top: -1px;
+        }
+    }
+    .dropdown-menu
+    {
+        min-height: 144px;
+        max-height: 600px;
+        width: 450px;
+        border-radius: 10px;
+        user-select: none;
+        transition: all .25s ease-out!important;
+        inset: 80px auto auto 0px!important;
+        opacity: 0;
+        visibility: hidden;
+        display: block;
+        box-shadow: -1px 3px 7px -1px rgba(0,0,0,0.44);
+        border-color: $border-color-box;
+        transform: translate(-250px, -30px)!important;
+        &.show
+        {
+            opacity: 1;
+            visibility: visible;
+        }
+        a{
+            font-size: 13px;
+            line-height: 30px;
+            &:active
+            {
+                background-color: $button-hover;
+                color: #212529;
+            }
+            &:not(:first-child)
+            {
+                border-top: 1px solid $border-color-avatar;
+            }
+        }
+        .notification-header
+        {
+            user-select: none;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin: 10px;
+            span
+            {
+                font-size: 14px;
+                padding: 0;
+                margin: 0;
+                padding-left: 15px;
+                margin-right: 15px;
+                line-height: 20px;
+                &.setting
+                {
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    &:hover
+                    {
+                        background-color: $background-hover;
+                    }
+                    &:hover + p
+                    {
+                        display: block;
+                    }
+                    i{
+                        transform: translate(-50%, 30%);
+                        font-size: 19px;
+                    }
+                }
+                &:first-child
+                {
+                    padding-top: 5px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                }
+            }
+            p
+            {
+                position: absolute;
+                display: none;
+                background-color: $text-color;
+                border-radius: 10px;
+                right: 0;
+                top: -190%;
+                padding: 0px 20px;
+                color: white;
+                &::after
+                {
+                    position: absolute;
+                    bottom: -10px;
+                    right: 19px;
+                    background-color: $text-color;
+                    content: "";
+                    -webkit-clip-path: polygon(50% 99%, 0 50%, 100% 50%);
+                    clip-path: polygon(50% 99%, 0 50%, 100% 50%);
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+}

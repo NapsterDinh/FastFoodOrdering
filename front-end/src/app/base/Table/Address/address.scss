@@ -1,0 +1,137 @@
+@import "../../../../scss/_variable";
+
+._1gkIPw
+{
+    background-color: white;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 5%);
+    padding: 20px;
+    padding-left: 30px!important;
+    margin-bottom: 30px;
+    ._1TKMuK
+    {
+        display: flex;
+        justify-content: space-between;
+        ._20Qrq_
+        {
+            display: flex;
+            margin-top: 10px;
+            ._2t2xOY
+            {
+                margin-right: 20px;
+                i
+                {
+                    font-size: 25px;
+                    color: $link-hover;
+                }
+            }
+            h4
+            {
+                color: $link-hover;
+                font-weight: 500;
+            }
+        }
+        .WtRfuB
+        {
+            button
+            {
+                border: solid 1px black;
+                margin-right: 20px;
+                i
+                {
+                    margin-right: 10px;
+                }
+                &:hover
+                {
+                    background-color: $background-hover-white-button;
+                }
+            }
+        }
+    }
+    ._1uZwoD
+    {
+      .stardust-radio-group
+      {
+          display: flex;
+          .change
+            {
+                display: inline-block;
+                color: #05a;
+                cursor: pointer;
+                width: 90px;
+                line-height: 28px;
+                margin-right: -10px;
+            }
+          .stardust-radio
+          {
+              width: 100%;
+              display: flex;
+              justify-content: left;
+              .stardust-radio-justify
+              {
+                  display: flex;
+                  justify-content: center;
+                  margin-top: 6px;
+                  margin-right: 20px;
+              }
+              
+              label
+              {
+                display: flex;
+                cursor: pointer;
+                margin-bottom: -0.5rem;
+                justify-content: space-between;
+                ._3E850P
+                {
+                    font-size: 16px;
+                    font-weight: 600;
+                    width: fit-content;
+                    margin-right: 20px;
+                    min-width: 200px;
+                    p
+                    {
+                        margin-bottom: 20px;
+                    }
+                }
+                .full-address-container
+                {
+                    display: flex;
+                    align-items: flex-start;
+                    ._2F7jaW
+                    {
+                        font-size: 16px;
+                        margin-right: 20px;
+                    }
+                    .default
+                    {
+                        padding: 2px 20px;
+                        background-color: $backgorund-info;
+                        border-radius: 15px;
+                        color: white;
+                        margin-right: 20px;
+                        &.type
+                        {
+                            background-color: #ddae71;
+                        }
+                    }
+                }
+                
+              }
+          }
+          &.block
+          {
+              display: block;
+          }
+      }  
+      ._1JeHlf
+      {
+          button
+          {
+              margin-right: 20px;
+              &.btn-primary::before
+              {
+                  background-color: transparent;
+              }
+          }
+      }
+    }
+}

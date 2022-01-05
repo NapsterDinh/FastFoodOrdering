@@ -1,0 +1,51 @@
+
+.card
+{
+    background-color: white!important;
+    .card-header
+    {
+        margin-top: 20px;
+        background-color: white!important;
+        margin-left: 20px;
+        margin-right: 20px;
+
+        h4
+        {
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+    }
+    .card-body
+    {
+        margin-left: 20px;
+        margin-right: 20px;
+        form
+        {
+            &.profile
+            {
+                &.address
+                {
+                    .form-check-container
+                    {
+                        display: flex;
+                        padding-top: 5px;
+                        .form-check
+                        {
+                            margin-right: 20px;
+                            input, label
+                            {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+                .mb-3
+                {
+                    border: none;
+                }
+            }
+        }
+        
+    }
+    
+}

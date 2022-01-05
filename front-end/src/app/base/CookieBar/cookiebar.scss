@@ -1,0 +1,13 @@
+#cookies-bar
+{
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.4s ease-out;
+    &.hidden
+    {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}

@@ -1,0 +1,64 @@
+@import '../../../../scss/_variable';
+#menu-navigation
+{
+    padding-right: 10px;
+    ul
+    {
+        padding: 0rem !important;
+        .link-container
+        {
+            &.selected
+            {
+                .nav-item-container
+                {
+                    color: $link-hover;
+                }
+                .nav-dropdown
+                {
+                    height: 100%;
+                }  
+            }
+            .nav-item
+            {
+                display: flex;
+                flex-direction: column;
+                .nav-item-container
+                {
+                    padding: 1rem 2.5em;
+                    width: 100%;
+                    a {
+                        position: relative;
+                        &:focus
+                        {
+                            color: white;
+                            text-decoration: none;
+                        }
+                        i
+                        {
+                            position: absolute;
+                            top: 50%;  /* position the top  edge of the element at the middle of the parent */
+                            right: 0;
+                            transform: translate(-50%, -50%);
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .nav-dropdown
+                {
+                    background-color: white;
+                    color: $text-color;
+                    list-style: none;
+                    
+                    height: 0;
+                    overflow: hidden;
+                    .nav-dropdown-item
+                    {
+                        border-bottom: 1px solid $border-color-box;
+                        padding-left: 2rem;
+                    }
+                }
+            }
+        }
+        
+    }
+}
